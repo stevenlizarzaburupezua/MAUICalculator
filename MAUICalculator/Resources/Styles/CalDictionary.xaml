@@ -31,4 +31,49 @@
         <Setter Property="FontSize" Value="50"></Setter>
     </Style>
       <!--#endregion-->
+    
+    <!--#region BoxView -->
+
+    <Style TargetType="BoxView">
+        <Setter Property="Color"
+                Value="{AppThemeBinding Dark={StaticResource DarkPrimary},
+            Light={StaticResource LightPrimary}}">
+        </Setter>
+        <Setter Property="CornerRadius"
+                Value="30,30,0,0"/>
+
+    </Style>
+    
+    <!--#endregion-->
+
+    <!--#region Buttons-->
+    <Style x:Key="BaseButton" TargetType="Button">
+        <Setter Property="BackgroundColor"
+                Value="{AppThemeBinding Dark={StaticResource DarkSecondary},
+            Light={StaticResource LightSeconday}}"></Setter>
+
+        <Setter Property="FontFamily" Value="SublimalLight"></Setter>
+        <Setter Property="FontSize" Value="25"></Setter>
+        <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource DarkText},
+            Light={StaticResource LightText}}"></Setter>
+
+    </Style>
+
+    <Style BasedOn="{StaticResource BaseButton}" TargetType="Button"></Style>
+    <Style x:Key="YellowButton"
+           BasedOn="{StaticResource BaseButton}"
+           TargetType="Button">
+
+        <Setter Property="TextColor" Value="{StaticResource YellowColor}"></Setter>
+    </Style>
+    <Style x:Key="RedButton"
+           BasedOn="{StaticResource BaseButton}"
+           TargetType="Button">
+
+        <Setter Property="TextColor" Value="{StaticResource RedColor}"></Setter>
+    </Style>
+   
+    <!--#endregion-->
+    
+    
 </ResourceDictionary>
